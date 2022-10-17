@@ -1,4 +1,6 @@
 .env
-data
 db
 .DS_Store
+data/*
+!data/fake
+logs

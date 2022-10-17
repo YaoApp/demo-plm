@@ -158,7 +158,7 @@
       "id": 5,
       "name": "通讯录",
       "parent": null,
-      "path": "/x/Table/staff.total",
+      "path": "/x/Table/staff.all",
       "visible_menu": 1,
       "children": [
         {
@@ -167,7 +167,7 @@
           "name": "员工",
           "id": 5010,
           "parent": 3,
-          "path": "/x/Table/staff.total",
+          "path": "/x/Table/staff.all",
           "visible_menu": 1
         },
         {
@@ -176,7 +176,7 @@
           "name": "部门",
           "id": 5020,
           "parent": 3,
-          "path": "/x/Table/department.total",
+          "path": "/x/Table/department.all",
           "visible_menu": 1
         }
       ]

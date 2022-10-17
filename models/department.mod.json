@@ -1,0 +1,55 @@
+{
+  "name": "::Department",
+  "table": { "name": "department", "comment": "::Department" },
+  "columns": [
+    { "label": "::ID", "name": "id", "type": "ID" },
+    {
+      "label": "::Parent ID",
+      "name": "parent_id",
+      "type": "bigInteger",
+      "nullable": true,
+      "index": true
+    },
+    {
+      "label": "::Department Name",
+      "name": "name",
+      "type": "string",
+      "length": 80,
+      "comment": "::Department Name",
+      "index": true,
+      "nullable": true,
+      "validations": [
+        {
+          "method": "typeof",
+          "args": ["string"],
+          "message": "::{{input}} Error"
+        }
+      ]
+    },
+    {
+      "label": "::Status",
+      "comment": "::Status",
+      "name": "status",
+      "type": "enum",
+      "default": "enabled",
+      "option": ["enabled", "disabled"],
+      "index": true,
+      "validations": [
+        {
+          "method": "typeof",
+          "args": ["string"],
+          "message": "::{{input}} Error, {{label}} should be string"
+        },
+        {
+          "method": "enum",
+          "args": ["enabled", "disabled"],
+          "message": "::{{input}} Error, {{label}} should be enabled/disabled"
+        }
+      ]
+    }
+  ],
+  "relations": {},
+  "values": [],
+  "indexes": [],
+  "option": { "timestamps": true, "soft_deletes": true }
+}

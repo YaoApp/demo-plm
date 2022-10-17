@@ -1,0 +1,6 @@
+{
+  "name": "::Department",
+  "action": {
+    "bind": { "model": "department" }
+  }
+}
