@@ -1,0 +1,11 @@
+{
+  "name": "::Finished",
+  "action": {
+    "bind": {
+      "model": "product",
+      "option": {
+        "wheres": [{ "column": "type", "value": "finished" }]
+      }
+    }
+  }
+}

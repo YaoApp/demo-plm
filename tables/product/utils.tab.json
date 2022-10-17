@@ -1,0 +1,11 @@
+{
+  "name": "::Utils",
+  "action": {
+    "bind": {
+      "model": "product",
+      "option": {
+        "wheres": [{ "column": "type", "value": "utils" }]
+      }
+    }
+  }
+}

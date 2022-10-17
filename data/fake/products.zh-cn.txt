@@ -1,0 +1,15 @@
+8LC.940.001,加长六角螺母,standard
+GB/T70.1  M6x145,内六角圆柱头螺钉,standard
+GB/T9074.8 M3x30,组合螺钉,standard
+GB/T 845 ST6.3x19,十字槽大扁头自攻螺丝,standard
+8LC.744.002,灭弧罩,component
+8LC.233.003,连杆,component
+8LC.300.002,罩,component
+8LC.750.002,绝缘板,component
+8LC.043.004,支座,component
+8LC.043.004,支座,component
+5LC.050.005,铆钉旋铆夹具,utils,侧板
+5LC.050.006,铆钉旋铆夹具,utils,侧板
+5LC.550.008,侧板装配夹具,utils,动触头
+8LC.282.003,弹簧,dashboard
+JSLC-2022-001,框架断路器5000,finished

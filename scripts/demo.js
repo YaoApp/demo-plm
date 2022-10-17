@@ -3,9 +3,32 @@
  */
 function Data() {
   clear();
+  fakeProducts();
   fakeSuppliers();
   fakeDepts();
   fakeUsers();
+}
+
+function fakeProducts() {
+  products = fake("products");
+  columns = ["sn", "name", "type", "supplier_id"];
+  data = [];
+
+  products.forEach((line, i) => {
+    row = line.split(",");
+    data.push([
+      row[0].trim(),
+      row[1].trim(),
+      row[2].trim(),
+      getRandomInt(1, 200),
+    ]);
+  });
+
+  res = Process("models.product.insert", columns, data);
+  res = res || {};
+  if (res.code && res.message) {
+    throw new Exception(res.message, res.code);
+  }
 }
 
 function fakeSuppliers() {
@@ -84,6 +107,8 @@ function clear() {
   var qb = new Query();
   qb.Get({ sql: { stmt: "truncate staff;" } });
   qb.Get({ sql: { stmt: "truncate department;" } });
+  qb.Get({ sql: { stmt: "truncate product;" } });
+  qb.Get({ sql: { stmt: "truncate supplier;" } });
 }
 
 /**

@@ -1,0 +1,11 @@
+{
+  "name": "::Component",
+  "action": {
+    "bind": {
+      "model": "product",
+      "option": {
+        "wheres": [{ "column": "type", "value": "component" }]
+      }
+    }
+  }
+}
