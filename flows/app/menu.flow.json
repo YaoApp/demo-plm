@@ -93,7 +93,7 @@
       "id": 3,
       "name": "供应商",
       "parent": null,
-      "path": "/x/Table/supplier",
+      "path": "/x/Table/supplier.all",
       "visible_menu": 0
     },
     {

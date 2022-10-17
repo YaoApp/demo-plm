@@ -1,0 +1,6 @@
+{
+  "name": "::Supplier",
+  "action": {
+    "bind": { "model": "supplier" }
+  }
+}

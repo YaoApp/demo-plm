@@ -3,8 +3,29 @@
  */
 function Data() {
   clear();
+  fakeSuppliers();
   fakeDepts();
   fakeUsers();
+}
+
+function fakeSuppliers() {
+  suppliers = fake("companies");
+  columns = ["sn", "name", "province", "city"];
+  data = [];
+
+  suppliers.forEach((line, i) => {
+    if (i == 0) {
+      return;
+    }
+    row = line.split(",");
+    data.push([row[11].trim(), row[0].trim(), row[8].trim(), row[9].trim()]);
+  });
+
+  res = Process("models.supplier.insert", columns, data);
+  res = res || {};
+  if (res.code && res.message) {
+    throw new Exception(res.message, res.code);
+  }
 }
 
 /**
