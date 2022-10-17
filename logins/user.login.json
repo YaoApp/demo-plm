@@ -1,0 +1,14 @@
+{
+  "name": "::User Login",
+  "action": {
+    "process": "scripts.user.Login",
+    "args": [":payload"]
+  },
+  "layout": {
+    "entry": "/x/Table/pet",
+    "captcha": "yao.utils.Captcha",
+    "cover": "/assets/images/login/cover.svg",
+    "slogan": "::Make Your Dream With Yao App Engine",
+    "site": "https://yaoapps.com/doc"
+  }
+}

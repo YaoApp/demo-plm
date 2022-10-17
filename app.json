@@ -1,0 +1,15 @@
+{
+  "xgen": "1.0",
+  "name": "::Product Life Management",
+  "short": "::PLM",
+  "description": "::Product Life Management",
+  "version": "0.10.2",
+  "menu": {
+    "process": "flows.app.menu",
+    "args": ["demo"]
+  },
+  "optional": {
+    "adminRoot": "admin",
+    "hideNotification": true
+  }
+}
