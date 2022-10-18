@@ -1,0 +1,56 @@
+{
+  "name": "::Deliverable",
+  "action": {
+    "bind": {
+      "model": "task.deliverable",
+      "option": { "withs": { "task": {} } }
+    }
+  },
+  "layout": {
+    "primary": "id",
+    "header": { "preset": {}, "actions": [] },
+    "filter": { "columns": [], "actions": [] },
+    "table": {
+      "props": {},
+      "columns": [
+        { "name": "任务", "width": 200 },
+        { "name": "::Deliverable", "width": 100 },
+        { "name": "::Numbers", "width": 100 },
+        { "name": "::Status", "width": 100 }
+      ],
+      "operation": {
+        "fold": false,
+        "width": 50,
+        "actions": [
+          { "title": "下载", "icon": "icon-download", "action": {} },
+          { "title": "上传", "icon": "icon-upload", "action": {} }
+        ]
+      }
+    }
+  },
+  "fields": {
+    "table": {
+      "任务": {
+        "bind": "task.name",
+        "view": {
+          "type": "Text",
+          "props": {}
+        }
+      },
+      "::Status": {
+        "bind": "status",
+        "edit": {
+          "props": {
+            "options": [
+              { "label": "未上传", "value": "waiting" },
+              { "label": "已上传", "value": "done" }
+            ],
+            "placeholder": "请选择状态"
+          },
+          "type": "Select"
+        },
+        "view": { "props": {}, "type": "Text" }
+      }
+    }
+  }
+}

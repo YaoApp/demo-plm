@@ -1,37 +1,30 @@
 {
-  "name": "::My Tasks",
+  "name": "::Tasks",
   "action": {
     "bind": {
       "model": "task",
       "option": {
-        "withs": { "step": {}, "milestone": {}, "manager": {}, "project": {} },
-        "wheres": [
-          { "column": "status", "op": "in", "value": ["waiting", "doing"] }
-        ],
-        "orders": [{ "column": "end_plan", "option": "asc" }]
+        "withs": { "step": {}, "milestone": {}, "manager": {} }
       }
     }
   },
   "layout": {
     "primary": "id",
     "header": { "preset": {}, "actions": [] },
-    "filter": {
-      "columns": [{ "name": "::Task Name", "width": 6 }],
-      "actions": []
-    },
+    "filter": { "columns": [], "actions": [] },
     "table": {
       "props": {},
       "columns": [
-        { "name": "任务", "width": 320 },
-        { "name": "项目", "width": 260 },
+        { "name": "任务", "width": 300 },
+        { "name": "::Plan Starting", "width": 100 },
         { "name": "::Plan End", "width": 100 },
         { "name": "::Task Starting", "width": 100 },
-        { "name": "::Task End", "width": 120 },
+        { "name": "::Task End", "width": 100 },
         { "name": "::Status", "width": 100 }
       ],
       "operation": {
         "fold": false,
-        "width": 100,
+        "width": 50,
         "actions": [
           {
             "title": "完成",
@@ -61,10 +54,6 @@
       "任务": {
         "bind": "name",
         "view": { "props": { "title": "milestone.name" }, "type": "Tooltip" }
-      },
-      "项目": {
-        "bind": "project.name",
-        "view": { "props": {}, "type": "Text" }
       },
       "::Status": {
         "bind": "status",

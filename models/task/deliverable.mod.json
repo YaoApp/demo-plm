@@ -73,7 +73,15 @@
       ]
     }
   ],
-  "relations": {},
+  "relations": {
+    "task": {
+      "type": "hasOne",
+      "model": "task",
+      "key": "id",
+      "foreign": "task_id",
+      "query": { "select": ["id", "name"] }
+    }
+  },
   "values": [],
   "indexes": [],
   "option": { "timestamps": true, "soft_deletes": true }

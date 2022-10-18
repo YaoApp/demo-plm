@@ -1,0 +1,36 @@
+{
+  "name": "::Milestone",
+  "action": {
+    "bind": {
+      "model": "project.milestone",
+      "option": { "withs": { "step": {} } }
+    }
+  },
+  "layout": {
+    "primary": "id",
+    "header": { "preset": {}, "actions": [] },
+    "filter": { "columns": [], "actions": [] },
+    "table": {
+      "props": {},
+      "columns": [
+        { "name": "::Milestone", "width": 200 },
+        { "name": "阶段", "width": 200 }
+      ],
+      "operation": {
+        "fold": false,
+        "width": 50,
+        "actions": [
+          { "title": "任务清单", "icon": "icon-clipboard", "action": {} }
+        ]
+      }
+    }
+  },
+  "fields": {
+    "table": {
+      "阶段": {
+        "bind": "step.name",
+        "view": { "type": "Text", "props": {} }
+      }
+    }
+  }
+}

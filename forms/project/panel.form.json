@@ -1,0 +1,153 @@
+{
+  "name": "::Project",
+  "action": { "bind": { "model": "project" } },
+  "layout": {
+    "primary": "id",
+    "operation": {
+      "preset": { "back": {} },
+      "actions": []
+    },
+    "form": {
+      "props": {},
+      "sections": [
+        {
+          "columns": [
+            { "name": "项目编号", "width": 6 },
+            { "name": "项目名称", "width": 6 },
+            { "name": "开始时间", "width": 4 },
+            { "name": "结束时间", "width": 4 },
+            { "name": "状态", "width": 4 },
+            {
+              "width": 24,
+              "tabs": [
+                {
+                  "title": "任务",
+                  "columns": [{ "name": "任务清单", "width": 24 }]
+                },
+                {
+                  "title": "里程碑",
+                  "columns": [{ "name": "项目里程碑", "width": 24 }]
+                },
+                {
+                  "title": "交付物",
+                  "columns": [{ "name": "交付清单", "width": 24 }]
+                },
+                {
+                  "title": "人员",
+                  "columns": [{ "name": "项目相关人员", "width": 24 }]
+                },
+                {
+                  "title": "日志",
+                  "columns": [{ "name": "项目日志", "width": 24 }]
+                },
+                {
+                  "title": "文件",
+                  "columns": [{ "name": "项目文件", "width": 24 }]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fields": {
+    "form": {
+      "ID": {
+        "bind": "id",
+        "edit": { "type": "Input", "props": { "disabled": true } }
+      },
+      "开始时间": {
+        "bind": "start",
+        "edit": {
+          "props": { "picker": "date", "placeholder": "请选择开始时间" },
+          "type": "DatePicker"
+        }
+      },
+      "结束时间": {
+        "bind": "end",
+        "edit": {
+          "props": { "picker": "date", "placeholder": "请选择结束时间" },
+          "type": "DatePicker"
+        }
+      },
+      "项目名称": {
+        "bind": "name",
+        "edit": { "type": "Input", "props": {} }
+      },
+      "项目编号": {
+        "bind": "sn",
+        "edit": { "type": "Input", "props": {} }
+      },
+      "状态": {
+        "bind": "status",
+        "edit": {
+          "props": {
+            "options": [
+              { "label": "进行中", "value": "pending" },
+              { "label": "已完成", "value": "complete" },
+              { "label": "已归档", "value": "archive" }
+            ],
+            "placeholder": "请选择状态"
+          },
+          "type": "Select"
+        },
+        "view": { "props": {}, "type": "Text" }
+      },
+      "任务清单": {
+        "bind": "id",
+        "edit": {
+          "type": "Table",
+          "props": {
+            "model": "project.panel.task",
+            "query": { "where.project_id.eq": ":id" }
+          }
+        }
+      },
+      "项目里程碑": {
+        "bind": "id",
+        "edit": {
+          "type": "Table",
+          "props": {
+            "model": "project.panel.milestone",
+            "query": { "where.project_id.eq": ":id" }
+          }
+        }
+      },
+      "交付清单": {
+        "bind": "id",
+        "edit": {
+          "type": "Table",
+          "props": {
+            "model": "project.panel.deliverable",
+            "query": { "where.project_id.eq": ":id" }
+          }
+        }
+      },
+      "项目相关人员": {
+        "bind": "id",
+        "edit": {
+          "type": "Table",
+          "props": {
+            "model": "project.panel.staff",
+            "query": { "where.project_id.eq": ":id" }
+          }
+        }
+      },
+      "项目日志": {
+        "bind": "id",
+        "edit": {
+          "type": "Table",
+          "props": { "model": "staff.all", "query": { "where.id.eq": "1" } }
+        }
+      },
+      "项目文件": {
+        "bind": "id",
+        "edit": {
+          "type": "Table",
+          "props": { "model": "staff.all", "query": { "where.id.eq": "1" } }
+        }
+      }
+    }
+  }
+}

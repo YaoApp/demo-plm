@@ -42,8 +42,8 @@
             "title": "::Project Admin",
             "icon": "icon-clipboard",
             "action": {
-              "Common.openModal": {
-                "Form": { "type": "edit", "model": "project" }
+              "Common.historyPush": {
+                "pathname": "/x/Form/project.panel/:id/edit"
               }
             }
           },
@@ -52,7 +52,7 @@
             "icon": "icon-settings",
             "action": {
               "Common.openModal": {
-                "Form": { "type": "edit", "model": "project" }
+                "Form": { "type": "edit", "model": "project.setting" }
               }
             }
           }

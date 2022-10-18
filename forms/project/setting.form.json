@@ -3,13 +3,12 @@
   "action": { "bind": { "model": "project" } },
   "layout": {
     "primary": "id",
-    "operation": { "preset": { "back": {} }, "actions": [] },
+    "operation": { "preset": {}, "actions": [] },
     "form": {
       "props": {},
       "sections": [
         {
-          "title": "基础信息",
-          "desc": "项目表格",
+          "title": "项目配置",
           "columns": [{ "name": "表格", "width": 24 }]
         }
       ]

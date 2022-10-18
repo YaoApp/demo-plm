@@ -1,0 +1,79 @@
+{
+  "name": "::Task",
+  "action": { "bind": { "model": "task" } },
+  "layout": {
+    "primary": "id",
+    "operation": {
+      "preset": { "back": {}, "save": { "back": true } },
+      "actions": []
+    },
+    "form": {
+      "props": {},
+      "sections": [
+        {
+          "columns": [
+            { "name": "状态", "width": 4 },
+            { "name": "任务名称", "width": 20 },
+            { "name": "开始时间", "width": 12 },
+            { "name": "完成时间", "width": 12 },
+            { "name": "计划开始时间", "width": 12 },
+            { "name": "计划完成时间", "width": 12 }
+          ]
+        }
+      ]
+    }
+  },
+  "fields": {
+    "form": {
+      "任务名称": {
+        "bind": "name",
+        "edit": {
+          "props": { "placeholder": "请输入" },
+          "type": "Input"
+        }
+      },
+      "开始时间": {
+        "bind": "start",
+        "edit": {
+          "props": { "picker": "date", "placeholder": "请选择" },
+          "type": "DatePicker"
+        }
+      },
+      "完成时间": {
+        "bind": "end",
+        "edit": {
+          "props": { "picker": "date", "placeholder": "请选择" },
+          "type": "DatePicker"
+        }
+      },
+      "计划开始时间": {
+        "bind": "start_plan",
+        "edit": {
+          "props": { "picker": "date", "placeholder": "请选择" },
+          "type": "DatePicker"
+        }
+      },
+      "计划完成时间": {
+        "bind": "end_plan",
+        "edit": {
+          "props": { "picker": "date", "placeholder": "请选择" },
+          "type": "DatePicker"
+        }
+      },
+      "状态": {
+        "bind": "status",
+        "edit": {
+          "props": {
+            "options": [
+              { "label": "未开始", "value": "waiting" },
+              { "label": "进行中", "value": "doing" },
+              { "label": "已完成", "value": "done" }
+            ],
+            "placeholder": "请选择状态"
+          },
+          "type": "Select"
+        }
+      }
+    }
+  }
+}

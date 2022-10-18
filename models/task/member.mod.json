@@ -36,7 +36,22 @@
       "nullable": true
     }
   ],
-  "relations": {},
+  "relations": {
+    "task": {
+      "type": "hasOne",
+      "model": "task",
+      "key": "id",
+      "foreign": "task_id",
+      "query": { "select": ["id", "name"] }
+    },
+    "staff": {
+      "type": "hasOne",
+      "model": "staff",
+      "key": "id",
+      "foreign": "staff_id",
+      "query": { "select": ["id", "name"] }
+    }
+  },
   "values": [],
   "indexes": [{ "columns": ["task_id", "staff_id"], "type": "unique" }],
   "option": { "timestamps": true, "soft_deletes": true }

@@ -33,12 +33,13 @@
       "name": "name",
       "type": "string",
       "length": 200,
+      "index": true,
       "comment": "::Task Name"
     },
     {
       "label": "::Task Starting",
       "name": "start",
-      "type": "timestamp",
+      "type": "date",
       "comment": "::Task Starting",
       "index": true,
       "nullable": true
@@ -46,7 +47,7 @@
     {
       "label": "::Task End",
       "name": "end",
-      "type": "timestamp",
+      "type": "date",
       "comment": "::Task End",
       "index": true,
       "nullable": true
@@ -54,7 +55,7 @@
     {
       "label": "::Plan Starting",
       "name": "start_plan",
-      "type": "timestamp",
+      "type": "date",
       "comment": "::Plan Starting",
       "index": true,
       "nullable": true
@@ -62,7 +63,7 @@
     {
       "label": "::Plan End",
       "name": "end_plan",
-      "type": "timestamp",
+      "type": "date",
       "comment": "::Plan End",
       "index": true,
       "nullable": true
@@ -114,7 +115,39 @@
       ]
     }
   ],
-  "relations": {},
+  "relations": {
+    "project": {
+      "type": "hasOne",
+      "model": "project",
+      "key": "id",
+      "foreign": "project_id",
+      "query": { "select": ["id", "name"] }
+    },
+    "step": {
+      "type": "hasOne",
+      "model": "project.step",
+      "key": "id",
+      "foreign": "step_id",
+      "query": { "select": ["id", "name"] }
+    },
+    "milestone": {
+      "type": "hasOne",
+      "model": "project.milestone",
+      "key": "id",
+      "foreign": "milestone_id",
+      "query": { "select": ["id", "name"] }
+    },
+    "manager": {
+      "type": "hasOne",
+      "model": "task.member",
+      "key": "task_id",
+      "foreign": "id",
+      "query": {
+        "select": ["id", "staff_id"],
+        "wheres": [{ "column": "is_manager", "value": 1 }]
+      }
+    }
+  },
   "values": [],
   "indexes": [],
   "option": { "timestamps": true, "soft_deletes": true }
