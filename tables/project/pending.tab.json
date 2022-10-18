@@ -3,8 +3,79 @@
   "action": {
     "bind": {
       "model": "project",
-      "option": {
-        "wheres": [{ "column": "status", "value": "pending" }]
+      "option": { "wheres": [{ "column": "status", "value": "pending" }] }
+    }
+  },
+  "layout": {
+    "primary": "id",
+    "header": { "preset": {}, "actions": [] },
+    "filter": {
+      "columns": [
+        { "name": "::Project SN", "width": 4 },
+        { "name": "::Project Name", "width": 4 }
+      ],
+      "actions": [
+        {
+          "title": "从模板创建",
+          "icon": "icon-plus",
+          "width": 3,
+          "action": {
+            "Common.historyPush": { "pathname": "/x/Table/project.template" }
+          }
+        }
+      ]
+    },
+    "table": {
+      "props": {},
+      "columns": [
+        { "name": "::Project SN", "width": 200 },
+        { "name": "::Project Name", "width": 260 },
+        { "name": "::Project Starting", "width": 120 },
+        { "name": "::Project End", "width": 120 },
+        { "name": "::Status" }
+      ],
+      "operation": {
+        "fold": false,
+        "width": 200,
+        "actions": [
+          {
+            "title": "::Project Admin",
+            "icon": "icon-clipboard",
+            "action": {
+              "Common.openModal": {
+                "Form": { "type": "edit", "model": "project" }
+              }
+            }
+          },
+          {
+            "title": "::Project Setting",
+            "icon": "icon-settings",
+            "action": {
+              "Common.openModal": {
+                "Form": { "type": "edit", "model": "project" }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "fields": {
+    "table": {
+      "::Status": {
+        "bind": "status",
+        "edit": {
+          "props": {
+            "options": [
+              { "label": "进行中", "value": "pending" },
+              { "label": "已完成", "value": "complete" },
+              { "label": "已归档", "value": "archive" }
+            ],
+            "placeholder": "请选择状态"
+          },
+          "type": "Select"
+        },
+        "view": { "props": {}, "type": "Text" }
       }
     }
   }

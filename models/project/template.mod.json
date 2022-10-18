@@ -7,6 +7,7 @@
       "label": "::Template Name",
       "name": "name",
       "type": "string",
+      "index": true,
       "length": 200,
       "comment": "::Template Name"
     },

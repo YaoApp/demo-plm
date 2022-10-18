@@ -2,6 +2,7 @@
   "xgen": "1.0",
   "name": "::Product Life Management",
   "short": "::PLM",
+  "lang": "zh-cn",
   "description": "::Product Life Management",
   "version": "0.10.2",
   "menu": {

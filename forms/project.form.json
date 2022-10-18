@@ -1,0 +1,29 @@
+{
+  "name": "::Project",
+  "action": { "bind": { "model": "project" } },
+  "layout": {
+    "primary": "id",
+    "operation": { "preset": {}, "actions": [] },
+    "form": {
+      "props": {},
+      "sections": [
+        {
+          "title": "基础信息",
+          "desc": "项目表格",
+          "columns": [{ "name": "表格", "width": 24 }]
+        }
+      ]
+    }
+  },
+  "fields": {
+    "form": {
+      "表格": {
+        "bind": "id",
+        "edit": {
+          "type": "Table",
+          "props": { "model": "project.template", "query": {} }
+        }
+      }
+    }
+  }
+}

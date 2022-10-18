@@ -22,7 +22,7 @@
     {
       "label": "::Project Starting",
       "name": "start",
-      "type": "timestamp",
+      "type": "date",
       "comment": "::Project Starting",
       "index": true,
       "nullable": true
@@ -30,7 +30,7 @@
     {
       "label": "::Project End",
       "name": "end",
-      "type": "timestamp",
+      "type": "date",
       "comment": "::Project End",
       "index": true,
       "nullable": true

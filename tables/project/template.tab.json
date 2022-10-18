@@ -5,5 +5,32 @@
       "model": "project.template",
       "option": { "select": ["id", "name", "created_at", "updated_at"] }
     }
+  },
+  "layout": {
+    "primary": "id",
+    "header": { "preset": {} },
+    "filter": {
+      "columns": [{ "name": "::Template Name", "width": 4 }],
+      "actions": []
+    },
+    "table": {
+      "props": {},
+      "columns": [{ "name": "::Template Name" }],
+      "operation": {
+        "fold": false,
+        "width": 255,
+        "actions": [
+          {
+            "title": "::Create Project",
+            "icon": "icon-plus-circle",
+            "action": {
+              "Common.openModal": {
+                "Form": { "type": "edit", "model": "project" }
+              }
+            }
+          }
+        ]
+      }
+    }
   }
 }
