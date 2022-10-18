@@ -1,0 +1,184 @@
+{
+  "name": "框架断路器1000,1600,2000,3200,4000,5000",
+  "data": {
+    "steps": [
+      {
+        "name": "第一阶段",
+        "milestones": [
+          {
+            "name": "确定方案",
+            "tasks": [
+              {
+                "name": "产品结构改进设计及评审",
+                "deliverables": [{ "name": "3D模型", "nums": 1 }]
+              }
+            ]
+          },
+          {
+            "name": "样机验证及结构优化（第一轮）",
+            "tasks": [
+              {
+                "name": "样机加工零件、样机装配",
+                "deliverables": [{ "name": "样品", "nums": 5 }]
+              },
+              {
+                "name": "温升试验",
+                "deliverables": [
+                  { "name": "样品", "nums": 1 },
+                  { "name": "试验报告、整改意见", "nums": 1 }
+                ]
+              },
+              {
+                "name": "分断（1天）、短耐性能试验",
+                "deliverables": [
+                  { "name": "样品", "nums": 2 },
+                  { "name": "试验报告、整改意见", "nums": 1 }
+                ]
+              },
+              {
+                "name": "试验评审、整机模型修改",
+                "deliverables": [
+                  { "name": "工程图（开模）", "nums": 1 },
+                  { "name": "试验报告、整改意见", "nums": 1 }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "样机验证及结构优化（第二轮）",
+            "tasks": [
+              {
+                "name": "样机加工零件、样机装配",
+                "deliverables": [{ "name": "样品", "nums": 5 }]
+              },
+              {
+                "name": "温升试验",
+                "deliverables": [
+                  { "name": "样品", "nums": 1 },
+                  { "name": "试验报告、整改意见", "nums": 1 }
+                ]
+              },
+              {
+                "name": "分断（1天）、短耐性能试验",
+                "deliverables": [
+                  { "name": "样品", "nums": 2 },
+                  { "name": "试验报告、整改意见", "nums": 1 }
+                ]
+              },
+              {
+                "name": "试验评审、整机模型修改",
+                "deliverables": [
+                  { "name": "3D模型", "nums": 1 },
+                  { "name": "试验报告、整改意见", "nums": 1 }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "第二阶段",
+        "milestones": [
+          {
+            "name": "",
+            "tasks": [
+              {
+                "name": "工程图定稿",
+                "deliverables": [{ "name": "工程图（开模）", "nums": 1 }]
+              }
+            ]
+          },
+          {
+            "name": "零件开模",
+            "tasks": [
+              {
+                "name": "合同签订",
+                "deliverables": [{ "name": "合同", "nums": 1 }]
+              },
+              {
+                "name": "开模",
+                "deliverables": [{ "name": "模具", "nums": 1 }]
+              },
+              {
+                "name": "检卡定稿",
+                "deliverables": [{ "name": "检卡", "nums": 1 }]
+              },
+              {
+                "name": "首样确认",
+                "deliverables": [{ "name": "首样照片", "nums": 1 }]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "第三阶段",
+        "milestones": [
+          {
+            "name": "修模",
+            "tasks": [
+              {
+                "name": "修模计划下发",
+                "deliverables": [{ "name": "修模计划书", "nums": 1 }]
+              },
+              {
+                "name": "开模",
+                "deliverables": [{ "name": "模具", "nums": 1 }]
+              },
+              {
+                "name": "修模件确认",
+                "deliverables": [{ "name": "产品", "nums": 1 }]
+              }
+            ]
+          },
+          {
+            "name": "样品加工",
+            "tasks": [
+              {
+                "name": "产品小批量试制及3C样机",
+                "deliverables": [
+                  { "name": "试制报告（含修模计划）", "nums": 1 }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "第四阶段",
+        "milestones": [
+          {
+            "name": "验证",
+            "tasks": [
+              {
+                "name": "开模件产品验证",
+                "deliverables": [{ "name": "试验报告", "nums": 1 }]
+              }
+            ]
+          },
+          {
+            "name": "",
+            "tasks": [
+              {
+                "name": "3C认证",
+                "deliverables": [
+                  { "name": "样机", "nums": 20 },
+                  { "name": "认证报告", "nums": 1 }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "技术归档",
+            "tasks": [
+              {
+                "name": "结题归档",
+                "deliverables": [{ "name": "全套项目资料", "nums": 1 }]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

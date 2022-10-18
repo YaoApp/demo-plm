@@ -1,0 +1,6 @@
+{
+  "name": "::Projects",
+  "action": {
+    "bind": { "model": "project" }
+  }
+}

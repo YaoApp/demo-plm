@@ -55,7 +55,7 @@
           "name": "全部",
           "id": 2023,
           "parent": 2,
-          "path": "/x/Table/project.total",
+          "path": "/x/Table/project.all",
           "visible_menu": 1
         },
         {
@@ -70,10 +70,19 @@
         {
           "blocks": 0,
           "icon": "icon-clipboard",
+          "name": "已完成",
+          "id": 2022,
+          "parent": 2,
+          "path": "/x/Table/project.complete",
+          "visible_menu": 1
+        },
+        {
+          "blocks": 0,
+          "icon": "icon-clipboard",
           "name": "已归档",
           "id": 2023,
           "parent": 2,
-          "path": "/x/Table/project.complete",
+          "path": "/x/Table/project.archive",
           "visible_menu": 1
         },
         {
@@ -82,7 +91,7 @@
           "name": "项目模板",
           "id": 2023,
           "parent": 2,
-          "path": "/x/Form/project.template",
+          "path": "/x/Table/project.template",
           "visible_menu": 1
         }
       ]

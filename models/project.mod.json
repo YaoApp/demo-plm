@@ -1,0 +1,89 @@
+{
+  "name": "::Project",
+  "table": { "name": "project", "comment": "::Project" },
+  "columns": [
+    { "label": "::ID", "name": "id", "type": "ID" },
+    {
+      "label": "::Project SN",
+      "name": "sn",
+      "type": "string",
+      "length": 80,
+      "comment": "::Project SN",
+      "index": true,
+      "nullable": true,
+      "validations": [
+        {
+          "method": "typeof",
+          "args": ["string"],
+          "message": "::{{input}} Error"
+        }
+      ]
+    },
+    {
+      "label": "::Project Starting",
+      "name": "start",
+      "type": "timestamp",
+      "comment": "::Project Starting",
+      "index": true,
+      "nullable": true
+    },
+    {
+      "label": "::Project End",
+      "name": "end",
+      "type": "timestamp",
+      "comment": "::Project End",
+      "index": true,
+      "nullable": true
+    },
+    {
+      "label": "::Project Name",
+      "name": "name",
+      "type": "string",
+      "length": 100,
+      "comment": "::Project Name",
+      "index": true,
+      "nullable": true,
+      "validations": [
+        {
+          "method": "typeof",
+          "args": ["string"],
+          "message": "::{{input}} Error"
+        }
+      ]
+    },
+    {
+      "label": "::Remark",
+      "name": "remark",
+      "type": "string",
+      "length": 300,
+      "comment": "::Remark",
+      "nullable": true,
+      "validations": []
+    },
+    {
+      "label": "::Status",
+      "comment": "::Status",
+      "name": "status",
+      "type": "enum",
+      "default": "pending",
+      "option": ["pending", "complete", "archive"],
+      "index": true,
+      "validations": [
+        {
+          "method": "typeof",
+          "args": ["string"],
+          "message": "::{{input}} Error, {{label}} should be string"
+        },
+        {
+          "method": "enum",
+          "args": ["pending", "complete", "archive"],
+          "message": "::{{input}} Error, {{label}} should be enabled/disabled"
+        }
+      ]
+    }
+  ],
+  "relations": {},
+  "values": [],
+  "indexes": [],
+  "option": { "timestamps": true, "soft_deletes": true }
+}

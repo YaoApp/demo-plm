@@ -1,0 +1,11 @@
+{
+  "name": "::Projects",
+  "action": {
+    "bind": {
+      "model": "project",
+      "option": {
+        "wheres": [{ "column": "status", "value": "complete" }]
+      }
+    }
+  }
+}

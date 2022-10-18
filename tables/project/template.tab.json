@@ -1,0 +1,9 @@
+{
+  "name": "::Templates",
+  "action": {
+    "bind": {
+      "model": "project.template",
+      "option": { "select": ["id", "name", "created_at", "updated_at"] }
+    }
+  }
+}

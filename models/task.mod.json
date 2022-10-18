@@ -1,0 +1,121 @@
+{
+  "name": "::Tasks",
+  "table": { "name": "task", "comment": "::Tasks" },
+  "columns": [
+    { "label": "::ID", "name": "id", "type": "ID" },
+    {
+      "label": "::Project ID",
+      "name": "project_id",
+      "type": "bigInteger",
+      "length": 20,
+      "comment": "::Project ID",
+      "index": true
+    },
+    {
+      "label": "::Step ID",
+      "name": "step_id",
+      "type": "bigInteger",
+      "length": 20,
+      "comment": "::Step ID",
+      "index": true
+    },
+    {
+      "label": "::Milestone ID",
+      "name": "milestone_id",
+      "type": "bigInteger",
+      "length": 20,
+      "comment": "::Milestone ID",
+      "nullable": true,
+      "index": true
+    },
+    {
+      "label": "::Task Name",
+      "name": "name",
+      "type": "string",
+      "length": 200,
+      "comment": "::Task Name"
+    },
+    {
+      "label": "::Task Starting",
+      "name": "start",
+      "type": "timestamp",
+      "comment": "::Task Starting",
+      "index": true,
+      "nullable": true
+    },
+    {
+      "label": "::Task End",
+      "name": "end",
+      "type": "timestamp",
+      "comment": "::Task End",
+      "index": true,
+      "nullable": true
+    },
+    {
+      "label": "::Plan Starting",
+      "name": "start_plan",
+      "type": "timestamp",
+      "comment": "::Plan Starting",
+      "index": true,
+      "nullable": true
+    },
+    {
+      "label": "::Plan End",
+      "name": "end_plan",
+      "type": "timestamp",
+      "comment": "::Plan End",
+      "index": true,
+      "nullable": true
+    },
+    {
+      "label": "::Delayed",
+      "name": "delayed",
+      "type": "boolean",
+      "comment": "::Delayed",
+      "index": true,
+      "nullable": true
+    },
+    {
+      "label": "::Delivered",
+      "name": "delivered",
+      "type": "boolean",
+      "comment": "::Delivered",
+      "index": true,
+      "nullable": true
+    },
+    {
+      "label": "::Remark",
+      "name": "remark",
+      "type": "string",
+      "length": 300,
+      "comment": "::Remark",
+      "nullable": true,
+      "validations": []
+    },
+    {
+      "label": "::Status",
+      "comment": "::Status",
+      "name": "status",
+      "type": "enum",
+      "default": "waiting",
+      "option": ["waiting", "doing", "done"],
+      "index": true,
+      "validations": [
+        {
+          "method": "typeof",
+          "args": ["string"],
+          "message": "::{{input}} Error, {{label}} should be string"
+        },
+        {
+          "method": "enum",
+          "args": ["waiting", "doing", "done"],
+          "message": "::{{input}} Error, {{label}} should be enabled/disabled"
+        }
+      ]
+    }
+  ],
+  "relations": {},
+  "values": [],
+  "indexes": [],
+  "option": { "timestamps": true, "soft_deletes": true }
+}
