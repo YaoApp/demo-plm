@@ -100,7 +100,7 @@
           "type": "Table",
           "props": {
             "model": "project.panel.task",
-            "query": { "where.project_id.eq": ":id" }
+            "query": { "where.project_id.eq": "{{id}}" }
           }
         }
       },
@@ -110,7 +110,7 @@
           "type": "Table",
           "props": {
             "model": "project.panel.milestone",
-            "query": { "where.project_id.eq": ":id" }
+            "query": { "where.project_id.eq": "{{id}}" }
           }
         }
       },
@@ -120,7 +120,7 @@
           "type": "Table",
           "props": {
             "model": "project.panel.deliverable",
-            "query": { "where.project_id.eq": ":id" }
+            "query": { "where.project_id.eq": "{{id}}" }
           }
         }
       },
@@ -130,7 +130,7 @@
           "type": "Table",
           "props": {
             "model": "project.panel.staff",
-            "query": { "where.project_id.eq": ":id" }
+            "query": { "where.project_id.eq": "{{id}}" }
           }
         }
       },

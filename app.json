@@ -1,16 +1,15 @@
 {
   "xgen": "1.0",
-  "name": "::Product Life Management",
-  "short": "::PLM",
-  "lang": "zh-cn",
-  "description": "::Product Life Management",
+  "name": "::Demo Application",
+  "short": "::Demo",
+  "description": "::Another yao application",
   "version": "0.10.2",
+  "adminRoot": "admin",
   "menu": {
     "process": "flows.app.menu",
     "args": ["demo"]
   },
   "optional": {
-    "adminRoot": "admin",
     "hideNotification": true
   }
 }

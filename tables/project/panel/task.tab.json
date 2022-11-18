@@ -30,7 +30,7 @@
             "title": "完成",
             "icon": "icon-check",
             "action": {
-              "Table.save": { "id": ":id", "status": "cured" }
+              "Table.save": { "id": "{{id}}", "status": "{{status}}" }
             },
             "style": "success",
             "confirm": { "title": "提示", "desc": "确认变更为完成状态？" }

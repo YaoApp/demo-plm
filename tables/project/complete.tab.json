@@ -34,7 +34,7 @@
             "icon": "icon-clipboard",
             "action": {
               "Common.historyPush": {
-                "pathname": "/x/Form/project.panel/:id/edit"
+                "pathname": "/x/Form/project.panel/{{id}}/edit"
               }
             }
           },
