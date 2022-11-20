@@ -23,6 +23,9 @@
 
 ![演示](https://release-bj-1252011659.cos.ap-beijing.myqcloud.com/docs/demo-plm/819e9d8b-5b0c-4112-988b-71f78b48755b.gif)
 
+[线上体验地址](https://plm.iqka.com/admin/login/admin)
+默认用户名: `xiang@iqka.com` , 默认密码: `A123456p+`
+
 Yao deom-plm 采用 <a href="https://github.com/YaoApp/yao">Yao 应用引擎开发</a>，适用于快速搭建应用管理后台和 API 接口，快速制作应用 API 接口等场景。
 
 ### 安装
@@ -64,4 +67,3 @@ docker run -d --restart unless-stopped --name demo-plm -p 5099:5099  yaoapp/demo
 默认用户名: `xiang@iqka.com`
 
 默认密码: `A123456p+`
-
