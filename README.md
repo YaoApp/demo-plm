@@ -35,7 +35,7 @@ Yao deom-plm 采用 <a href="https://github.com/YaoApp/yao">Yao 应用引擎开�
 [安装 YAO](https://yaoapps.com/doc/%E4%BB%8B%E7%BB%8D/%E5%AE%89%E8%A3%85%E8%B0%83%E8%AF%95)
 
 ```bash
-mkdir -p /path/app/root
+mkdir -p /data/app
 yao get yaoapp/demo-plm
 yao start
 ```
@@ -43,6 +43,8 @@ yao start
 登录管理后台
 
 管理后台地址: `http://<IP>:<PORT>/admin/`
+
+示例:`http://127.0.0.1:5099/admin`
 
 默认用户名: `xiang@iqka.com`
 
