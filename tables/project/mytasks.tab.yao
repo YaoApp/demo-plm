@@ -16,7 +16,7 @@
     "primary": "id",
     "header": { "preset": {}, "actions": [] },
     "filter": {
-      "columns": [{ "name": "::Task Name", "width": 6 }],
+      "columns": [{ "name": "Name", "width": 6 }],
       "actions": []
     },
     "table": {
@@ -57,6 +57,16 @@
     }
   },
   "fields": {
+    "filter": {
+      "Name": {
+        "bind": "where.name.match",
+        "edit": {
+          "type": "Input",
+          "compute": "Trim",
+          "props": {}
+        }
+      }
+    },
     "table": {
       "任务": {
         "bind": "name",

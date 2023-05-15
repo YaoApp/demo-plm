@@ -1,0 +1,127 @@
+{
+  "name": "::Projects",
+  "action": {
+    "bind": {
+      "model": "project",
+      "option": {}
+    }
+  },
+  "layout": {
+    "primary": "id",
+    "header": { "preset": {}, "actions": [] },
+    "filter": {
+      "columns": [
+        { "name": "SN", "width": 4 },
+        { "name": "Name", "width": 4 }
+      ],
+      "actions": [
+        {
+          "icon": "icon-plus",
+          "width": 3,
+          "action": {
+            "Common.openModal": {
+              "width": 1200,
+              "Form": {
+                "type": "edit",
+                "model": "project"
+              }
+            }
+          },
+          "title": "添加"
+        }
+      ]
+    },
+    "table": {
+      "props": {},
+      "columns": [
+        { "name": "编号", "width": 200 },
+        { "name": "开始时间", "width": 200 },
+        { "name": "结束时间", "width": 200 },
+        { "name": "项目名称", "width": 200 },
+        { "name": "::Status" }
+      ],
+      "operation": {
+        "fold": false,
+        "width": 200,
+        "actions": [
+          {
+            "icon": "icon-plus",
+            "width": 3,
+            "action": {
+              "Common.openModal": {
+                "width": 1200,
+                "Form": {
+                  "type": "edit",
+                  "model": "project.panel"
+                }
+              }
+            },
+            "title": "::Project Admin"
+          },
+          {
+            "title": "::Project Setting",
+            "icon": "icon-settings",
+            "action": {
+              "Common.openModal": {
+                "Form": { "type": "edit", "model": "project.setting" }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "fields": {
+    "filter": {
+      "SN": {
+        "bind": "where.sn.match",
+        "edit": {
+          "type": "Input",
+          "compute": "Trim",
+          "props": {}
+        }
+      },
+      "Name": {
+        "bind": "where.name.match",
+        "edit": {
+          "type": "Input",
+          "compute": "Trim",
+          "props": {}
+        }
+      }
+    },
+    "table": {
+      "::Status": {
+        "bind": "status",
+        "edit": {
+          "props": {
+            "options": [
+              { "label": "进行中", "value": "pending" },
+              { "label": "已完成", "value": "complete" },
+              { "label": "已归档", "value": "archive" }
+            ],
+            "placeholder": "请选择状态"
+          },
+          "type": "Select"
+        },
+        "view": { "props": {}, "type": "Text" }
+      },
+      "编号": {
+        "bind": "sn",
+        "view": { "props": {}, "type": "Text" }
+      },
+      "开始时间": {
+        "bind": "start",
+        "view": { "props": {}, "type": "Text" }
+      },
+      "结束时间": {
+        "bind": "end",
+        "view": { "props": {}, "type": "Text" }
+      },
+      "项目名称": {
+        "bind": "name",
+        "view": { "props": {}, "type": "Text" }
+      }
+    }
+  }
+}

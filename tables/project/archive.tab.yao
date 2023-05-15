@@ -11,18 +11,18 @@
     "header": { "preset": {}, "actions": [] },
     "filter": {
       "columns": [
-        { "name": "::Project SN", "width": 4 },
-        { "name": "::Project Name", "width": 4 }
+        { "name": "SN", "width": 4 },
+        { "name": "Name", "width": 4 }
       ],
       "actions": []
     },
     "table": {
       "props": {},
       "columns": [
-        { "name": "::Project SN", "width": 200 },
-        { "name": "::Project Name", "width": 260 },
-        { "name": "::Project Starting", "width": 120 },
-        { "name": "::Project End", "width": 120 },
+        { "name": "编号", "width": 200 },
+        { "name": "开始时间", "width": 200 },
+        { "name": "结束时间", "width": 200 },
+        { "name": "项目名称", "width": 200 },
         { "name": "::Status" }
       ],
       "operation": {
@@ -30,14 +30,20 @@
         "width": 200,
         "actions": [
           {
-            "title": "::Project Admin",
-            "icon": "icon-clipboard",
+            "icon": "icon-plus",
+            "width": 3,
             "action": {
-              "Common.historyPush": {
-                "pathname": "/x/Form/project.panel/{{id}}/edit"
+              "Common.openModal": {
+                "width": 1200,
+                "Form": {
+                  "type": "edit",
+                  "model": "project.panel"
+                }
               }
-            }
+            },
+            "title": "::Project Admin"
           },
+
           {
             "title": "::Project Setting",
             "icon": "icon-settings",
@@ -52,6 +58,24 @@
     }
   },
   "fields": {
+    "filter": {
+      "SN": {
+        "bind": "where.sn.match",
+        "edit": {
+          "type": "Input",
+          "compute": "Trim",
+          "props": {}
+        }
+      },
+      "Name": {
+        "bind": "where.name.match",
+        "edit": {
+          "type": "Input",
+          "compute": "Trim",
+          "props": {}
+        }
+      }
+    },
     "table": {
       "::Status": {
         "bind": "status",
@@ -66,6 +90,22 @@
           },
           "type": "Select"
         },
+        "view": { "props": {}, "type": "Text" }
+      },
+      "编号": {
+        "bind": "sn",
+        "view": { "props": {}, "type": "Text" }
+      },
+      "开始时间": {
+        "bind": "start",
+        "view": { "props": {}, "type": "Text" }
+      },
+      "结束时间": {
+        "bind": "end",
+        "view": { "props": {}, "type": "Text" }
+      },
+      "项目名称": {
+        "bind": "name",
         "view": { "props": {}, "type": "Text" }
       }
     }

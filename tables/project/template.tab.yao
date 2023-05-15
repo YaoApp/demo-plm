@@ -10,7 +10,7 @@
     "primary": "id",
     "header": { "preset": {} },
     "filter": {
-      "columns": [{ "name": "::Template Name", "width": 4 }],
+      "columns": [{ "name": "Name", "width": 4 }],
       "actions": []
     },
     "table": {
@@ -30,6 +30,18 @@
             }
           }
         ]
+      }
+    }
+  },
+  "fields": {
+    "filter": {
+      "Name": {
+        "bind": "where.name.match",
+        "edit": {
+          "type": "Input",
+          "compute": "Trim",
+          "props": {}
+        }
       }
     }
   }

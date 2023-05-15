@@ -51,12 +51,16 @@
         "edit": {
           "type": "Select",
           "props": {
-            "xProps": {
-              "$remote": {
-                "process": "models.pet.Get",
-                "query": { "select": ["name", "status"], "limit": 2 }
+            "options": [
+              {
+                "label": "启用",
+                "value": "启用"
+              },
+              {
+                "label": "禁用",
+                "value": "禁用"
               }
-            }
+            ]
           }
         }
       }

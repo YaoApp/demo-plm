@@ -1,194 +1,197 @@
 {
   "name": "APP Menu",
   "nodes": [],
-  "output": [
-    {
-      "blocks": 0,
-      "icon": "icon-activity",
-      "id": 1,
-      "name": "看板",
-      "parent": null,
-      "path": "/x/Chart/dashboard",
-      "visible_menu": 1,
-      "children": [
-        {
-          "blocks": 0,
-          "icon": "icon-package",
-          "name": "数据看板",
-          "id": 1010,
-          "parent": 1,
-          "path": "/x/Chart/dashboard",
-          "visible_menu": 1
-        },
-        {
-          "blocks": 0,
-          "icon": "icon-package",
-          "name": "项目预警",
-          "id": 1020,
-          "parent": 1,
-          "path": "/x/Table/project.warning",
-          "visible_menu": 1
-        }
-      ]
-    },
-    {
-      "blocks": 0,
-      "icon": "icon-clipboard",
-      "id": 2,
-      "name": "项目",
-      "parent": null,
-      "path": "/x/Table/project.mytasks",
-      "visible_menu": 1,
-      "children": [
-        {
-          "blocks": 0,
-          "icon": "icon-clipboard",
-          "name": "我的任务",
-          "id": 2010,
-          "parent": 2,
-          "path": "/x/Table/project.mytasks",
-          "visible_menu": 1
-        },
-        {
-          "blocks": 0,
-          "icon": "icon-clipboard",
-          "name": "全部",
-          "id": 2023,
-          "parent": 2,
-          "path": "/x/Table/project.all",
-          "visible_menu": 1
-        },
-        {
-          "blocks": 0,
-          "icon": "icon-clipboard",
-          "name": "进行中",
-          "id": 2023,
-          "parent": 2,
-          "path": "/x/Table/project.pending",
-          "visible_menu": 1
-        },
-        {
-          "blocks": 0,
-          "icon": "icon-clipboard",
-          "name": "已完成",
-          "id": 2022,
-          "parent": 2,
-          "path": "/x/Table/project.complete",
-          "visible_menu": 1
-        },
-        {
-          "blocks": 0,
-          "icon": "icon-clipboard",
-          "name": "已归档",
-          "id": 2023,
-          "parent": 2,
-          "path": "/x/Table/project.archive",
-          "visible_menu": 1
-        },
-        {
-          "blocks": 0,
-          "icon": "icon-clipboard",
-          "name": "项目模板",
-          "id": 2023,
-          "parent": 2,
-          "path": "/x/Table/project.template",
-          "visible_menu": 1
-        }
-      ]
-    },
-    {
-      "blocks": 0,
-      "icon": "icon-aperture",
-      "id": 3,
-      "name": "供应商",
-      "parent": null,
-      "path": "/x/Table/supplier.all",
-      "visible_menu": 0
-    },
-    {
-      "blocks": 0,
-      "icon": "icon-package",
-      "id": 4,
-      "name": "产品",
-      "parent": null,
-      "path": "/x/Table/product.finished",
-      "visible_menu": 1,
-      "children": [
-        {
-          "blocks": 0,
-          "icon": "icon-package",
-          "name": "成品",
-          "id": 4010,
-          "parent": 3,
-          "path": "/x/Table/product.finished",
-          "visible_menu": 1
-        },
-        {
-          "blocks": 0,
-          "icon": "icon-package",
-          "name": "零件",
-          "id": 4020,
-          "parent": 3,
-          "path": "/x/Table/product.component",
-          "visible_menu": 1
-        },
-        {
-          "blocks": 0,
-          "icon": "icon-package",
-          "name": "标准件",
-          "id": 4030,
-          "parent": 3,
-          "path": "/x/Table/product.standard",
-          "visible_menu": 1
-        },
-        {
-          "blocks": 0,
-          "icon": "icon-package",
-          "name": "工装夹具",
-          "id": 4040,
-          "parent": 3,
-          "path": "/x/Table/product.utils",
-          "visible_menu": 1
-        },
-        {
-          "blocks": 0,
-          "icon": "icon-package",
-          "name": "仪表件",
-          "id": 4050,
-          "parent": 3,
-          "path": "/x/Table/product.dashboard",
-          "visible_menu": 1
-        }
-      ]
-    },
-    {
-      "blocks": 0,
-      "icon": "icon-book",
-      "id": 5,
-      "name": "通讯录",
-      "parent": null,
-      "path": "/x/Table/staff.all",
-      "visible_menu": 1,
-      "children": [
-        {
-          "blocks": 0,
-          "icon": "icon-book",
-          "name": "员工",
-          "id": 5010,
-          "parent": 3,
-          "path": "/x/Table/staff.all",
-          "visible_menu": 1
-        },
-        {
-          "blocks": 0,
-          "icon": "icon-book",
-          "name": "部门",
-          "id": 5020,
-          "parent": 3,
-          "path": "/x/Table/department.all",
-          "visible_menu": 1
-        }
-      ]
-    }
-  ]
+  "output": {
+    "items": [
+      {
+        "blocks": 0,
+        "icon": "icon-activity",
+        "id": 1,
+        "name": "看板",
+        "parent": null,
+        "path": "/x/Chart/dashboard",
+        "visible_menu": 1,
+        "children": [
+          {
+            "blocks": 0,
+            "icon": "icon-package",
+            "name": "数据看板",
+            "id": 1010,
+            "parent": 1,
+            "path": "/x/Chart/dashboard",
+            "visible_menu": 1
+          },
+          {
+            "blocks": 0,
+            "icon": "icon-package",
+            "name": "项目预警",
+            "id": 1020,
+            "parent": 1,
+            "path": "/x/Table/project.warning",
+            "visible_menu": 1
+          }
+        ]
+      },
+      {
+        "blocks": 0,
+        "icon": "icon-clipboard",
+        "id": 2,
+        "name": "项目",
+        "parent": null,
+        "path": "/x/Table/project.mytasks",
+        "visible_menu": 1,
+        "children": [
+          {
+            "blocks": 0,
+            "icon": "icon-clipboard",
+            "name": "我的任务",
+            "id": 2010,
+            "parent": 2,
+            "path": "/x/Table/project.mytasks",
+            "visible_menu": 1
+          },
+          {
+            "blocks": 0,
+            "icon": "icon-clipboard",
+            "name": "全部",
+            "id": 2023,
+            "parent": 2,
+            "path": "/x/Table/project.all",
+            "visible_menu": 1
+          },
+          {
+            "blocks": 0,
+            "icon": "icon-clipboard",
+            "name": "进行中",
+            "id": 2023,
+            "parent": 2,
+            "path": "/x/Table/project.pending",
+            "visible_menu": 1
+          },
+          {
+            "blocks": 0,
+            "icon": "icon-clipboard",
+            "name": "已完成",
+            "id": 2022,
+            "parent": 2,
+            "path": "/x/Table/project.complete",
+            "visible_menu": 1
+          },
+          {
+            "blocks": 0,
+            "icon": "icon-clipboard",
+            "name": "已归档",
+            "id": 2023,
+            "parent": 2,
+            "path": "/x/Table/project.archive",
+            "visible_menu": 1
+          },
+          {
+            "blocks": 0,
+            "icon": "icon-clipboard",
+            "name": "项目模板",
+            "id": 2023,
+            "parent": 2,
+            "path": "/x/Table/project.template",
+            "visible_menu": 1
+          }
+        ]
+      },
+      {
+        "blocks": 0,
+        "icon": "icon-aperture",
+        "id": 3,
+        "name": "供应商",
+        "parent": null,
+        "path": "/x/Table/supplier.all",
+        "visible_menu": 0
+      },
+      {
+        "blocks": 0,
+        "icon": "icon-package",
+        "id": 4,
+        "name": "产品",
+        "parent": null,
+        "path": "/x/Table/product.finished",
+        "visible_menu": 1,
+        "children": [
+          {
+            "blocks": 0,
+            "icon": "icon-package",
+            "name": "成品",
+            "id": 4010,
+            "parent": 3,
+            "path": "/x/Table/product.finished",
+            "visible_menu": 1
+          },
+          {
+            "blocks": 0,
+            "icon": "icon-package",
+            "name": "零件",
+            "id": 4020,
+            "parent": 3,
+            "path": "/x/Table/product.component",
+            "visible_menu": 1
+          },
+          {
+            "blocks": 0,
+            "icon": "icon-package",
+            "name": "标准件",
+            "id": 4030,
+            "parent": 3,
+            "path": "/x/Table/product.standard",
+            "visible_menu": 1
+          },
+          {
+            "blocks": 0,
+            "icon": "icon-package",
+            "name": "工装夹具",
+            "id": 4040,
+            "parent": 3,
+            "path": "/x/Table/product.utils",
+            "visible_menu": 1
+          },
+          {
+            "blocks": 0,
+            "icon": "icon-package",
+            "name": "仪表件",
+            "id": 4050,
+            "parent": 3,
+            "path": "/x/Table/product.dashboard",
+            "visible_menu": 1
+          }
+        ]
+      },
+      {
+        "blocks": 0,
+        "icon": "icon-book",
+        "id": 5,
+        "name": "通讯录",
+        "parent": null,
+        "path": "/x/Table/staff.all",
+        "visible_menu": 1,
+        "children": [
+          {
+            "blocks": 0,
+            "icon": "icon-book",
+            "name": "员工",
+            "id": 5010,
+            "parent": 3,
+            "path": "/x/Table/staff.all",
+            "visible_menu": 1
+          },
+          {
+            "blocks": 0,
+            "icon": "icon-book",
+            "name": "部门",
+            "id": 5020,
+            "parent": 3,
+            "path": "/x/Table/department.all",
+            "visible_menu": 1
+          }
+        ]
+      }
+    ],
+    "setting": []
+  }
 }

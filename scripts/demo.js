@@ -2,7 +2,7 @@
  * Generate demo data
  */
 function Data() {
-  clear();
+ // clear();
   fakeProducts();
   fakeSuppliers();
   fakeDepts();

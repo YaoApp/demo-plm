@@ -21,9 +21,11 @@ jobs:
 
       - name: pack for Station (@Silicon Valley)
         run: |
+          mkdir ../data
           rm -rf ./.git
           rm -rf ./.github
-          zip -q -r latest.zip ../${{ env.IMAGE_NAME }}
+          cp -r * ../data/
+          zip -q -r latest.zip ../data
 
       - name: Configure COS For Silicon Valley
         env:
